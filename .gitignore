@@ -1,6 +1,8 @@
 # Binaries for programs and plugins
 main
 vnds
+*.nds
+*.elf
 *.exe
 *.exe~
 *.so
@@ -9,6 +11,7 @@ vnds
 
 # Ignore binary output folders
 bin/
+build/
 
 # Ignore common editor/system specific metadata
 .DS_Store

@@ -2,8 +2,6 @@ module vnds
 
 #include <nds.h>
 
-pub type VoidFn = fn ()
-
 struct C.touchPosition
 {
 	pub:

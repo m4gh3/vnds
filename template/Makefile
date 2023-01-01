@@ -126,6 +126,6 @@ endif
 # rule for compiling v code
 #---------------------------------------------------------------------------------
 
-vmain.c: $(notdir $(wildcard vsource/*.v))
-	cd ../vsource; v . -o ../$(BUILD)/vmain.c -enable-globals -gc none -manualfree
+vmain.c: ../vsource/$(notdir $(wildcard ../vsource/*.v))
+	cd ../vsource; v . -o ../$(BUILD)/vmain.c -enable-globals -gc none -autofree
 
