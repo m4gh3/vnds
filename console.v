@@ -2,9 +2,6 @@ module vnds
 
 #include <nds.h>
 
-vram_main_bg = 1
-vram_sub_bg = 4
-
 /*pub struct ConsoleFont
 {
 	gfx &u16
@@ -61,7 +58,7 @@ pub type ConsolePrint = fn (con voidptr, c u8 ) bool
 }*/
 
 struct C.PrintConsole
-type PrintConsole = C.PrintConsole
+pub type PrintConsole = C.PrintConsole
 
 fn C.consoleDemoInit() &C.PrintConsole
 
@@ -83,8 +80,8 @@ pub fn console_init(console &PrintConsole,
 ) &PrintConsole
 { return C.consoleInit(console, layer, bg_type, bg_size, map_base, tile_base, main_display, load_graphics) }
 
-fn C.consoleSelect(&PrintConsole)
+fn C.consoleSelect(&PrintConsole) &C.PrintConsole
 
 [inline]
 pub fn console_select(print_console &PrintConsole) &PrintConsole
-{ C.consoleSelect(print_console) }
+{ return C.consoleSelect(print_console) }

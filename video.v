@@ -95,11 +95,11 @@ fn C.vramSetBankC(u32)
 
 [inline]
 pub fn video_set_mode(mode VideoMode)
-{ C.videoSetMode(mode) }
+{ C.videoSetMode(u32(mode)) }
 
 [inline]
 pub fn video_set_mode_sub(mode VideoMode)
-{ C.videoSetModeSub(mode) }
+{ C.videoSetModeSub(u32(mode)) }
 
 [inline]
 pub fn vram_set_bank_a(vram_type VramTypeA)
