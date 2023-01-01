@@ -1,4 +1,4 @@
-import vnds
+import m4gh3.vnds
 
 __global
 ( frame = u32(0) )
